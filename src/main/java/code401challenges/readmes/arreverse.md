@@ -9,4 +9,4 @@ took an appproch of whiteboard then implement ideaology from whiteboard exercise
 
 ## Solution
 <!-- Embedded whiteboard image -->
-<img src="../assets/ArrayReverseWB">
+<img src="../assets/ArrayReverseWB.jpg">

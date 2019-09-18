@@ -7,7 +7,7 @@ public class ArrayShift {
 
     public static int[] shiftArray(int[] arr, int num){
         int midIndex = 0;
-        int[] newArr = new int[arr.length];
+        int[] newArr = new int[arr.length+1];
         if(arr.length %2==0) {
             midIndex = arr.length / 2;
         }else{

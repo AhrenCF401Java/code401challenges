@@ -20,4 +20,7 @@ public class BinarySearchTest {
     public void searchInputEmptyTest() {
         assertEquals(-1, BinarySearch.search(new int[]{}, 8));
     }
+
+
+
 }

@@ -61,12 +61,57 @@ public class LinkedList {
 
 
     public void insertBefore(int value,int newVal){
+//        check to make sure the list has stuff in it
+        if(head == null || head.next == null){
+            System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+        }else if(head.value == value){
+            prepend(newVal);
+        }
+        else{
+//       Track node current and next looking for the right place to insert
+//            instantiate here as prepend will make a new node and place at beginning if it is called
+            Node newNode = new Node(newVal);
 
+            Node prevNode = head;
+            Node currNode = prevNode.next;
+
+            while (currNode != null && currNode.value != value){
+                prevNode = prevNode.next;
+                currNode = currNode.next;
+            }
+            if(currNode == null){
+                System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+            }else{
+                newNode.next = currNode;
+                prevNode.next = newNode;
+            }
+        }
     }
 
 
 
     public void insertAfter(int value,int newVal) {
+//       create a new node to insert
+        Node newNode = new Node(newVal);
+//        check to make sure the list has stuff in it
+        if(head == null || head.next == null){
+            System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+        }
+        else{
+//            Track
+            Node currNode = head;
+            Node nextNode =currNode.next;
+            while (nextNode != null && currNode.value != value){
+                currNode = currNode.next;
+                nextNode = nextNode.next;
+            }
+            if(nextNode == null){
+                System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+            }else{
 
+                newNode.next = nextNode;
+                currNode.next = newNode;
+            }
+        }
     }
 }

@@ -8,3 +8,6 @@ Write the following methods for the Linked List class
     * which add a new node with the given newValue immediately before the first value node
 * <b>.insertAfter(value, newVal)</b> 
     * which add a new node with the given newValue immediately after the first value node
+## White Boards for ll-insertions
+<img src="../assets/insertAfter.jpg">
+<img src="../assets/insertBefore.jpg">

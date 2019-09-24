@@ -2,7 +2,6 @@ package code401challenges.linkedlist;
 
 public class LinkedList {
     //Got help form Jessica comments are my notes to show understanding
-
     //declares head will be Node type does not instantiate
     Node head;
 
@@ -25,8 +24,6 @@ public class LinkedList {
 
 
 
-
-
     public boolean includes(int value){
     //get next and check if value matches node value
         Node current = this.head;
@@ -38,12 +35,10 @@ public class LinkedList {
         }
         return false;
     }
-
-
 //    Define a method called toString which takes in no arguments and returns a string representing
 //    all the values in the Linked List.
-
     //overrides parent classes and allows it to print to string
+
     @Override
     public String toString(){
         StringBuilder allValues = new StringBuilder("This is all the values in the node from beginning to end");
@@ -55,5 +50,68 @@ public class LinkedList {
             current = current.next;
         }
         return allValues.toString();
+    }
+
+
+
+    public void append(int value){
+
+    }
+
+
+
+    public void insertBefore(int value,int newVal){
+//        check to make sure the list has stuff in it
+        if(head == null || head.next == null){
+            System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+        }else if(head.value == value){
+            prepend(newVal);
+        }
+        else{
+//       Track node current and next looking for the right place to insert
+//            instantiate here as prepend will make a new node and place at beginning if it is called
+            Node newNode = new Node(newVal);
+
+            Node prevNode = head;
+            Node currNode = prevNode.next;
+
+            while (currNode != null && currNode.value != value){
+                prevNode = prevNode.next;
+                currNode = currNode.next;
+            }
+            if(currNode == null){
+                System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+            }else{
+                newNode.next = currNode;
+                prevNode.next = newNode;
+            }
+        }
+    }
+
+
+
+    public void insertAfter(int value,int newVal) {
+//       create a new node to insert
+        Node newNode = new Node(newVal);
+//        check to make sure the list has stuff in it
+        if(head == null || head.next == null){
+            System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+        }
+        else{
+//            Track
+            Node currNode = head;
+            Node nextNode =currNode.next;
+            while (nextNode != null && currNode.value != value){
+                currNode = currNode.next;
+                nextNode = nextNode.next;
+            }
+            if(nextNode == null){
+                System.out.println("Sad eagle screams in sorrow :( the action is not possible.");
+            }else{
+
+                newNode.next = nextNode;
+                currNode.next = newNode;
+            }
+        }
     }
 }

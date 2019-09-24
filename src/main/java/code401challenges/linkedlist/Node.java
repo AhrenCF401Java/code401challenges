@@ -6,6 +6,10 @@ public class Node {
     int value;
     Node next;
 // constructor for all node types
+
+
+
+
     public Node(int value){
         //value of this node
         this.value = value;

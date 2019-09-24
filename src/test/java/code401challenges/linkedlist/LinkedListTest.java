@@ -1,15 +1,28 @@
 package code401challenges.linkedlist;
 
 import org.checkerframework.common.value.qual.StaticallyExecutable;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
+
+    LinkedList test;
+    @Before
+    public void setup() {
+        test = new LinkedList();
+        test.prepend(3);
+        test.prepend(5);
+        test.prepend(7);
+        test.prepend(9);
+        test.prepend(10);
+    }
+
     @Test
     public void linkedListTest() {
-        LinkedList test = new LinkedList();
-        assertNull(test.head);
+        LinkedList list = new LinkedList();
+        assertNull(list.head);
     }
 
 
@@ -27,20 +40,14 @@ public class LinkedListTest {
 
 
 //    3.The head property will properly point to the first node in the linked list
-    @Test
-    public void 
+//    @Test
+//    public void
 
 
 
 //    4.Can properly insert multiple nodes into the linked list
     @Test
     public void propPrepend() {
-        LinkedList test = new LinkedList();
-        test.prepend(3);
-        test.prepend(5);
-        test.prepend(7);
-        test.prepend(9);
-        test.prepend(10);
         Node current = test.head;
         int nodeCount=0;
         for(int i=0;i<5;i++){
@@ -56,11 +63,6 @@ public class LinkedListTest {
     @Test
     public void includesTest(){
         LinkedList test = new LinkedList();
-        test.prepend(3);
-        test.prepend(5);
-        test.prepend(7);
-        test.prepend(9);
-        test.prepend(10);
         Node current = test.head;
         assertTrue(test.includes(9) == true);
     }
@@ -70,12 +72,6 @@ public class LinkedListTest {
 //    6.Will return false when searching for a value in the linked list that does not exist
     @Test
     public void notIncludesTest(){
-        LinkedList test = new LinkedList();
-        test.prepend(3);
-        test.prepend(5);
-        test.prepend(7);
-        test.prepend(9);
-        test.prepend(10);
         Node current = test.head;
         assertTrue(test.includes(4) == false);
     }
@@ -85,18 +81,8 @@ public class LinkedListTest {
 //    7.Can properly return a collection of all the values that exist in the linked list
     @Test
     public void testToString() {
-        LinkedList test = new LinkedList();
-        test.prepend(3);
-        test.prepend(5);
-        test.prepend(7);
-        test.prepend(9);
-        test.prepend(10);
         assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 7\nNode Value = 5\nNode Value = 3",
                 test.toString()
         );
     }
-
-
-
-
 }

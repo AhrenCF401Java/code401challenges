@@ -51,4 +51,22 @@ public class LinkedList {
         }
         return allValues.toString();
     }
+
+
+
+    public void append(int value){
+
+    }
+
+
+
+    public void insertBefore(int value,int newVal){
+
+    }
+
+
+
+    public void insertAfter(int value,int newVal) {
+
+    }
 }

@@ -40,12 +40,17 @@ public class LinkedListTest {
 
 
 //    3.The head property will properly point to the first node in the linked list
-//    @Test
-//    public void
+    @Test
+    public void rightFirstNodeTest(){
+            Node firstNode = test.head;
+        assertTrue(test.head.value == 10
+        );
+    }
 
 
 
 //    4.Can properly insert multiple nodes into the linked list
+//    tests to see if the right number of nodes were made
     @Test
     public void propPrepend() {
         Node current = test.head;
@@ -84,5 +89,32 @@ public class LinkedListTest {
         assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 7\nNode Value = 5\nNode Value = 3",
                 test.toString()
         );
+    }
+
+
+//    checks to see if the correct value is being inserted at the end of the list.
+    @Test
+    public void appendTest(){
+//        check to see if the to string method can see the new node at the end of the list
+        assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 7\nNode Value = 5\nNode Value = 3\nNode Value = 1",
+                test.toString());
+    }
+
+
+
+    @Test
+    public void insertBeforeTest(){
+        test.insertBefore(7,6);
+        assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 6\nNode Value = 7\nNode Value = 5\nNode Value = 3\nNode Value = 1",
+                test.toString());
+    }
+
+
+
+    @Test
+    public void insertAfterTest(){
+        test.insertAfter(7,6);
+        assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 7\nNode Value = 6\nNode Value = 5\nNode Value = 3\nNode Value = 1",
+                test.toString());
     }
 }

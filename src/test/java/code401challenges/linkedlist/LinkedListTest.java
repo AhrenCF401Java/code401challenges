@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 public class LinkedListTest {
 
     LinkedList test;
+
     @Before
     public void setup() {
         test = new LinkedList();
@@ -117,5 +118,22 @@ public class LinkedListTest {
         test.insertAfter(7,6);
         assertEquals("This is all the values in the node from beginning to end\nNode Value = 10\nNode Value = 9\nNode Value = 7\nNode Value = 6\nNode Value = 5\nNode Value = 3",
                 test.toString());
+    }
+
+    @Test
+    public void kthvalTest(){
+        assertEquals(
+                7,
+                test.kthFromTheLast(3)
+        );
+
+    }
+
+//    https://www.baeldung.com/junit-assert-exception
+    @Test (expected = NullPointerException.class)
+    public void whenExceptionThrown_thenExpectationSatisfied() {
+        test.prepend(3);
+        test.kthFromTheLast(20);
+
     }
 }

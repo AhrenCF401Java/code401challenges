@@ -114,4 +114,29 @@ public class LinkedList {
             }
         }
     }
+
+
+
+    public int size(){
+         int size = 0;
+         Node currNode = this.head;
+         while(currNode != null){
+             currNode = currNode.next;
+             size++;
+         }
+         return size;
+    }
+
+
+
+    public int kthFromTheLast(int k){
+       Node currNode = this.head;
+       int size = this.size();
+       int stepper = 1;
+       while(stepper < k){
+           stepper++;
+           currNode = currNode.next;
+       }
+        return currNode.value;
+    }
 }

@@ -128,10 +128,12 @@ public class LinkedList {
     }
 
 
-
     public int kthFromTheLast(int k){
-       Node currNode = this.head;
-       int size = this.size();
+        int size = this.size();
+        if(k > size){
+            throw new NullPointerException("Not a valid node index, list size is " + size);
+        }
+        Node currNode = this.head;
        int stepper = 1;
        while(stepper < k){
            stepper++;

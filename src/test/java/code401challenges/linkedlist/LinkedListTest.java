@@ -9,16 +9,27 @@ import static org.junit.Assert.*;
 public class LinkedListTest {
 
     LinkedList test;
+    LinkedList testTwo;
 
     @Before
     public void setup() {
         test = new LinkedList();
+        test.prepend(1);
         test.prepend(3);
         test.prepend(5);
         test.prepend(7);
         test.prepend(9);
-        test.prepend(10);
+
+        testTwo = new LinkedList();
+        testTwo.prepend(2);
+        testTwo.prepend(4);
+        testTwo.prepend(6);
+        testTwo.prepend(8);
+        testTwo.prepend(10);
+
     }
+
+
 
     @Test
     public void linkedListTest() {
@@ -129,11 +140,45 @@ public class LinkedListTest {
 
     }
 
+    @Test
+    public void mergeSameLengthTest(){
+        LinkedList.mergeLists(test,testTwo);
+        assertEquals(
+                "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
+                test.toString()
+        );
+    }
+
+    @Test
+    public void mergeLongerListOneLengthTest(){
+        test.prepend(11);
+        test.prepend(12);
+        LinkedList.mergeLists(test,testTwo);
+        assertEquals(
+                "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
+                test.toString()
+        );
+
+    }
+
+    @Test
+    public void mergeLongerListTwoLengthTest(){
+        testTwo.prepend(11);
+        testTwo.prepend(12);
+        LinkedList.mergeLists(test,testTwo);
+        assertEquals(
+                "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
+                test.toString()
+        );
+
+    }
+
 //    https://www.baeldung.com/junit-assert-exception
     @Test (expected = NullPointerException.class)
     public void whenExceptionThrown_thenExpectationSatisfied() {
         test.prepend(3);
         test.kthFromTheLast(20);
-
     }
+
+
 }

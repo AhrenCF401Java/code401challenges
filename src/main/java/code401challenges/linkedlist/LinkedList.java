@@ -4,11 +4,8 @@ public class LinkedList {
     //Got help form Jessica comments are my notes to show understanding
     //declares head will be Node type does not instantiate
     Node head;
-
     //constructor for new linked list
-    LinkedList (){
-        this.head = null;
-    }
+    LinkedList () {this.head = null;}
 
 
 
@@ -35,9 +32,8 @@ public class LinkedList {
         }
         return false;
     }
-//    Define a method called toString which takes in no arguments and returns a string representing
-//    all the values in the Linked List.
-    //overrides parent classes and allows it to print to string
+
+
 
     @Override
     public String toString(){
@@ -128,17 +124,44 @@ public class LinkedList {
     }
 
 
+
     public int kthFromTheLast(int k){
         int size = this.size();
         if(k > size){
             throw new NullPointerException("Not a valid node index, list size is " + size);
         }
         Node currNode = this.head;
-       int stepper = 1;
+       int stepper = 0;
        while(stepper < k){
            stepper++;
            currNode = currNode.next;
        }
         return currNode.value;
+    }
+
+
+
+    public static LinkedList mergeLists(LinkedList one, LinkedList two){
+        //create variables to hold each nodes. next
+        Node cnl1 = one.head;
+        Node cnl2 = two.head;
+        Node cnl1Next = cnl1.next;
+        Node cnl2Next = cnl2.next;
+
+//        check if any of the current next values are null
+        if(cnl1Next != null) {cnl1 = one.head.next;}
+        if(cnl2Next != null) {cnl2 = two.head.next;}
+
+//         merge lists while next of each node list is not null
+        while(cnl1Next != null){
+            cnl1.next = cnl2;
+            cnl2.next = cnl1Next;
+            cnl1Next = cnl1Next.next;
+            cnl2Next = cnl2Next.next;
+            if(cnl2Next == null){return one;}
+        }
+//        check if the rest of the nodes from list 2 might be trying to escape and point the last node in list one to the current node in list 2 idf not null
+        if(cnl2 != null) {cnl1.next = cnl2;}
+        return one;
     }
 }

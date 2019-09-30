@@ -14,18 +14,18 @@ public class LinkedListTest {
     @Before
     public void setup() {
         test = new LinkedList();
-        test.prepend(1);
-        test.prepend(3);
-        test.prepend(5);
-        test.prepend(7);
         test.prepend(9);
+        test.prepend(7);
+        test.prepend(5);
+        test.prepend(3);
+        test.prepend(1);
 
         testTwo = new LinkedList();
-        testTwo.prepend(2);
-        testTwo.prepend(4);
-        testTwo.prepend(6);
-        testTwo.prepend(8);
         testTwo.prepend(10);
+        testTwo.prepend(8);
+        testTwo.prepend(6);
+        testTwo.prepend(4);
+        testTwo.prepend(2);
 
     }
 
@@ -142,7 +142,7 @@ public class LinkedListTest {
 
     @Test
     public void mergeSameLengthTest(){
-        LinkedList.mergeLists(test,testTwo);
+        LinkedList.mergeLists(test.head,testTwo.head);
         assertEquals(
                 "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
                 test.toString()
@@ -153,7 +153,7 @@ public class LinkedListTest {
     public void mergeLongerListOneLengthTest(){
         test.prepend(11);
         test.prepend(12);
-        LinkedList.mergeLists(test,testTwo);
+        LinkedList.mergeLists(test.head,testTwo.head);
         assertEquals(
                 "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
                 test.toString()
@@ -165,7 +165,7 @@ public class LinkedListTest {
     public void mergeLongerListTwoLengthTest(){
         testTwo.prepend(11);
         testTwo.prepend(12);
-        LinkedList.mergeLists(test,testTwo);
+        LinkedList.mergeLists(test.head,testTwo.head);
         assertEquals(
                 "This is all the values in the node from beginning to end\nNode Value = 1\nNode Value = 2\nNode Value = 3\nNode Value = 4\nNode Value = 5\nNode Value = 6\nNode Value = 7\nNode Value = 8\nNode Value = 9\nNode Value = 10",
                 test.toString()

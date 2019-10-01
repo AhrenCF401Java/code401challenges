@@ -25,7 +25,12 @@ public class Stack {
         this.top = top.next;
 //        return our temp which is the old top
         return cur.value;
+    }
 
-
+    public Node peek() throws EmptyStackException {
+        if (this.top == null){
+            throw new EmptyStackException();
+        }
+        return this.top;
     }
 }

@@ -27,10 +27,10 @@ public class Stack {
         return cur.value;
     }
 
-    public Node peek() throws EmptyStackException {
+    public int peek() throws EmptyStackException {
         if (this.top == null){
             throw new EmptyStackException();
         }
-        return this.top;
+        return this.top.value;
     }
 }

@@ -9,7 +9,8 @@ public class Queue {
            front = new Node(last);
            back = front;
         } else {
-            back = new Node(last);
+            back.next = new Node(last);
+            back = back.next;
         }
     }
 
@@ -19,7 +20,20 @@ public class Queue {
         return temp;
     }
 
-    public int peek(){
-        return front.value;
+
+    public Node peek(){
+        return front;
+    }
+
+
+    public int size(){
+        int count = 0;
+        Node next = front;
+        while(next != null){
+            count++;
+            next = next.next;
+
+        }
+        return count;
     }
 }

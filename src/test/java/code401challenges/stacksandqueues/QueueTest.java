@@ -22,12 +22,19 @@ public class QueueTest {
         assertEquals(5,test.size());
     }
 
-
+//this worsk and throws  null if i add anymore
     @Test
     public void dequeue(){
+        assertEquals( 1, test.dequeue());
+        assertEquals( 2, test.dequeue());
+        assertEquals( 3, test.dequeue());
+        assertEquals( 4, test.dequeue());
+        assertEquals( 5, test.dequeue());
     }
-
+//not sure how to test this
+    @Test
     public void peek(){
+        assertEquals( 1, test.peek());
     }
 
 

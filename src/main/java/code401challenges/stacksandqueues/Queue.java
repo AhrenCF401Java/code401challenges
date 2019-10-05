@@ -14,15 +14,21 @@ public class Queue {
         }
     }
 
-    public int dequeue(){
-        int temp = front.value;
-        front = front.next;
-        return temp;
+    public int dequeue() throws NullPointerException{
+        if(front != null) {
+            int temp = front.value;
+            front = front.next;
+            return temp;
+        }
+        throw new NullPointerException("Queue Empty");
     }
 
 
-    public Node peek(){
+    public Node peek() throws NullPointerException{
+        if(front != null) {
         return front;
+        }
+        throw new NullPointerException("Queue Empty");
     }
 
 

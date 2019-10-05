@@ -14,3 +14,5 @@ Then when dequeue is called while dequeue.peek is not null it will just pop of t
 ## Solution
 <!-- Embedded whiteboard image -->
 <img src="../assets/psudoqueue.jpg">
+
+

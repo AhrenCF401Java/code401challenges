@@ -11,4 +11,4 @@ ended up using michells solution or recurtion
 
 ## Solution
 <!-- Embedded whiteboard image -->
-<img src="merge.md">
+<img src="../assets/merge.jpg">

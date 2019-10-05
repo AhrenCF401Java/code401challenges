@@ -14,3 +14,7 @@ Then when dequeue is called while dequeue.peek is not null it will just pop of t
 ## Solution
 <!-- Embedded whiteboard image -->
 <img src="../assets/psudoqueue.jpg">
+
+You can still get points for: 
++1 Finish Queue class 
++1 Tests for Queue class (test thoroughly)

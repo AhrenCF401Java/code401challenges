@@ -15,7 +15,7 @@ public class MultiBracketValidationTest {
 
     @Test
     public void multiBracketValidationTest(){
-//        assertTrue(multiBracketValidation(test1));
+        assertTrue(multiBracketValidation(test1));
         assertTrue(multiBracketValidation(test2));
     }
 

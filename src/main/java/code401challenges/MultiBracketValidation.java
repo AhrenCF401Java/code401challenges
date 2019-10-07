@@ -28,7 +28,9 @@ public class MultiBracketValidation {
             if (curChar.equals("[") || curChar.equals("{") || curChar.equals("(")) {
                 lBrackets.push(curChar);
 //                If current character makes a set of brackets with the top of the stack pop and continue
-            } else if (curChar.equals(")") && lBrackets.peek().equals("(")) {
+            } else if ((curChar.equals("}") && lBrackets.peek().equals("{")) ||
+                    (curChar.equals("]") && lBrackets.peek().equals("[")) ||
+                    (curChar.equals(")") && lBrackets.peek().equals("(")) ) {
                 lBrackets.pop();
             }
         }

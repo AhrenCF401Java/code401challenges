@@ -6,6 +6,8 @@ import static org.junit.Assert.*;
 
 public class NodeTest {
     Node testNode = new Node(7);
+    Node left = new Node(3);
+    Node right = new Node(2);
 
     @Test
     public void getValue() {
@@ -19,16 +21,7 @@ public class NodeTest {
     }
 
     @Test
-    public void setLeft() {
-        assertEquals(testNode.setLeft(new Node(5)));
-    }
-
-    @Test  
     public void getRight() {
         assertEquals(null,testNode.getRight());
-    }
-
-    @Test
-    public void setRight() {
     }
 }

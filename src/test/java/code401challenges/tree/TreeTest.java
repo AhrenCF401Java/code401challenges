@@ -10,8 +10,8 @@ public class TreeTest {
 
     @Before
     public void setup(){
-        Node
-        Node rootNode = new Node(1,new ,node3)
+//        Node
+//        Node rootNode = new Node(1,new ,node3)
     }
 
     @Test

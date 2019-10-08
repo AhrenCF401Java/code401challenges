@@ -1,29 +1,29 @@
 package code401challenges.tree;
 //https://www.baeldung.com/java-binary-tree
-public class Tree<T>{
-    Node root;
+public class Tree<E>{
+    Node<E> root;
 
-    public void preOrder(Node node){
+    public void preOrder(Node<E> node){
         if (node != null) {
             System.out.print(" " + node.value);
-            preOrder((Node) node.left);
-            preOrder((Node) node.right);
+            preOrder(node.left);
+            preOrder(node.right);
         }
     }
 
-    public void postOrder(Node node){
+    public void postOrder(Node<E> node){
         if(node != null){
-            postOrder((Node) node.left);
-            postOrder((Node) node.right);
+            postOrder(node.left);
+            postOrder(node.right);
             System.out.println(" " + node.value);
         }
     }
 
-    public void inOrder(Node node){
+    public void inOrder(Node<E> node){
         if (node != null) {
-            inOrder((Node) node.left);
+            inOrder(node.left);
             System.out.print(" " + node.value);
-            inOrder((Node) node.right);
+            inOrder(node.right);
         }
     }
 

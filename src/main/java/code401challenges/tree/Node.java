@@ -2,10 +2,10 @@ package code401challenges.tree;
 //https://www.baeldung.com/java-binary-tree
 public class Node<E> {
     E value;
-    E left;
-    E right;
+    Node<E> left;
+    Node<E> right;
 
-    public Node(E value, E left, E right){
+    public Node(E value, Node<E> left, Node<E> right){
         this.value = value;
         this.left = left;
         this.right = right;
@@ -23,19 +23,19 @@ public class Node<E> {
         this.value = value;
     }
 
-    public E getLeft() {
+    public Node<E> getLeft() {
         return left;
     }
 
-    public void setLeft(E left) {
+    public void setLeft(Node<E> left) {
         this.left = left;
     }
 
-    public E getRight() {
+    public Node<E> getRight() {
         return right;
     }
 
-    public void setRight(E right) {
+    public void setRight(Node<E> right) {
         this.right = right;
     }
 }

@@ -1,8 +1,9 @@
 package code401challenges.tree;
 //https://www.baeldung.com/java-binary-tree
-public class Tree {
+public class Tree<E>{
+    Node<E> root;
 
-    public void preOrder(Node node){
+    public void preOrder(Node<E> node){
         if (node != null) {
             System.out.print(" " + node.value);
             preOrder(node.left);
@@ -10,7 +11,7 @@ public class Tree {
         }
     }
 
-    public void postOrder(Node node){
+    public void postOrder(Node<E> node){
         if(node != null){
             postOrder(node.left);
             postOrder(node.right);
@@ -18,7 +19,7 @@ public class Tree {
         }
     }
 
-    public void inOrder(Node node){
+    public void inOrder(Node<E> node){
         if (node != null) {
             inOrder(node.left);
             System.out.print(" " + node.value);

@@ -20,6 +20,11 @@ public class TreeTest {
     }
 
     @Test
+    public void maxValue(){
+
+    }
+
+    @Test
     public void preOrder() {
         assertArrayEquals(new Integer[]{1,5,6,10,4,3,7},
                 tree.preOrder().toArray());

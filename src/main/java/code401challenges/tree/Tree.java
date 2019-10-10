@@ -12,6 +12,32 @@ public class Tree<E>{
 
     public Tree(){};
 
+    public int maxValue(){
+        if(this.root == null){
+            throw new NullPointerException();
+        }
+       return maxValue(this.root);
+    }
+
+    public int maxValue(Node node) {
+            int max = (int) node.value;
+            if (node.right != null) {
+                int maxRight = maxValue(node.right);
+                if (maxRight > max) {
+                    max = maxRight;
+                }
+            }
+            if (node.left != null) {
+                int maxLeft = maxValue(node.left);
+                if (maxLeft > max) {
+                    max = maxLeft;
+                }
+            }
+        return max;
+    }
+
+
+
     private ArrayList<E> preOrder(Node<E> cur, ArrayList<E> treeContents){
         if (cur == null) {
             return treeContents;

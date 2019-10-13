@@ -96,4 +96,8 @@ public class Tree<E>{
         }
         return treeContents;
     }
+
+    public String toString(){
+    return "";
+    }
 }

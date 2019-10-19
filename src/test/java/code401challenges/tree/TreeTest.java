@@ -14,11 +14,11 @@ public class TreeTest {
     public void setup(){
         Node<Integer> rootNode = new Node<>(1,
 //                                    left of 1
-                                     new Node<Integer>( 5,
-                     new Node<Integer>( 6), new Node<Integer>( 10)),
+                new Node<Integer>( 5,
+    new Node<Integer>( 6), new Node<Integer>( 10)),
 //                                    right of 1
-                                     new Node<Integer>( 4,
-                     new Node<Integer>( 3), new Node<Integer>( 7)));
+                                        new Node<Integer>( 4,
+                             new Node<Integer>( 3), new Node<Integer>( 7)));
 
         tree = new Tree(rootNode);
 

@@ -2,14 +2,16 @@
 
 ##
 ##Problem Domain
-
+* Sort an array of unsorted values 
 #
 ##Solution
-*
-## Approach & Efficiency
+* take the first value in the array and compare it to the next if its bigger leave it if its smaller move it to the left
 
-##Whiteboard pics:
-<img src="../assets/">
+## Approach & Efficiency
+O(n) space and time
+##Blog Link
+[Blog link](../blogs/insertSortBlog.md)
+
 
 ##
 

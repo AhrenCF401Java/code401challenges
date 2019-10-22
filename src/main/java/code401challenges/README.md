@@ -8,9 +8,9 @@
 * [PseudoQueue](./readmes/psudoQueue.md)
 * [Animal Shelter](./readmes/animalShelter.md)
 * [MultiBracketValidation](./readmes/mbv.md)
-* [Challenge](./readmes/)
-* [Challenge](./readmes/)
-* [Challenge](./readmes/)
+* [Max Value](./readmes/maxValue.md)
+* [Breadth First Search](./readmes/breadth.md)
+* [Insertion Sort](./readmes/insertionSort.md)
 * [Challenge](./readmes/)
 * [Challenge](./readmes/)
 

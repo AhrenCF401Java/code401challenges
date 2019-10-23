@@ -6,13 +6,9 @@ This algorithm sorts an unsorted array of int's from least to greatest. It is sl
 
 ###Information Flow
 Think about a hand of cards, starting from the second from the left check to see it the one to the left of it is bigger or smaller. 
-If it is smaller move it to the left. Now the first two cards should be sorted. now do this for the third card. THis time it will need to be checked against cards until it is the bigger of the two and inserted to the right of the first card smaller than it.
+If it is smaller move it to the left. Now the first two cards should be sorted. now do this for the third card. This time it will need to be checked against cards until it is the bigger of the two and inserted to the right of the first card smaller than it.
 See the below diagram from geeks for geeks for a visual reference.
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/insertionsort.png">
-
-###Algorithm
-
-
 
 ###Pseudocode
 

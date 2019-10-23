@@ -11,6 +11,10 @@
 * [Max Value](./readmes/maxValue.md)
 * [Breadth First Search](./readmes/breadth.md)
 * [Insertion Sort](./readmes/insertionSort.md)
+* [Merge Sort](./readmes/mergeSort)
+
+* [Challenge](./readmes/)
+* [Challenge](./readmes/)
 * [Challenge](./readmes/)
 * [Challenge](./readmes/)
 

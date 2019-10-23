@@ -58,10 +58,8 @@ Merge and MergeSort algorithms
 
 
 ##Video
-Read
+[Vid on Merge Sort](https://www.youtube.com/watch?v=TzeBrDU-JaY)
 
-Article 1
-Article 2
-Bookmark
+##Read
+[Wiki on Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 
-Website

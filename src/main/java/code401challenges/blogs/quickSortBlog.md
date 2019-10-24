@@ -16,7 +16,7 @@ performance is dependant on a well selected pivot.
 
 ##Diagram
 
-<img src="https://en.wikipedia.org/wiki/File:Quicksort-diagram.svg">
+![](https://en.wikipedia.org/wiki/File:Quicksort-diagram.svg)
 
 ##Algorithm
 * Select a pivot as well as a left and a right

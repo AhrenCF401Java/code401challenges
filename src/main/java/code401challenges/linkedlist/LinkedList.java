@@ -156,32 +156,3 @@ public class LinkedList {
 }
 
 
-//        Node cnl1 = one.head;
-//        Node cnl2 = two.head;
-//        Node cnl1Next = cnl1.next;
-//        Node cnl2Next = cnl2.next;
-//        System.out.println(cnl1);
-//        System.out.println(cnl1Next);
-//
-////        check if any of the current next values are null
-//        if(cnl1Next != null) {cnl1 = one.head.next;}
-//        if(cnl2Next != null) {cnl2 = two.head.next;}
-//
-////         merge lists while next of each node list is not null
-//        while(cnl1Next != null){
-//            cnl1.next = cnl2;
-//            cnl2.next = cnl1Next;
-//            cnl1= cnl1Next;
-//            System.out.println(cnl1);
-//            cnl2= cnl2Next;
-//            cnl1Next = cnl1Next.next;
-//            //this doesnt seem to be working
-//            cnl2Next = cnl2Next.next;
-//            // guessing this wont either
-//            if(cnl2Next == null){return one;}
-//        }
-////        check if the rest of the nodes from list 2 might be trying to escape and point the last node in list one to the current node in list 2 idf not null
-//        if(cnl2 != null) {cnl1.next = cnl2;}
-//        return one;
-//    }
-//}

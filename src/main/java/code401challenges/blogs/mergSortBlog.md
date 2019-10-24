@@ -4,7 +4,9 @@ It uses  O(n log n) time
 
 ####Wiki on merge sort says
 
-    "In the worst case, merge sort does about 39% fewer comparisons than quicksort method does in the average case. In terms of moves, merge sort's worst case complexity is O(n log n)—the same complexity as quicksort's best case, and merge sort's best case takes about half as many iterations as the worst case."
+    "In the worst case, merge sort does about 39% fewer comparisons than quicksort method does in the average case. 
+    In terms of moves, merge sort's worst case complexity is O(n log n)—the same complexity as quicksort's best case,
+    and merge sort's best case takes about half as many iterations as the worst case."
 
 
 ###Learning Objectives

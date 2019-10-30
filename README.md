@@ -14,7 +14,7 @@
 * [Merge Sort](src/main/java/code401challenges/readmes/mergeSort.md)
 * [Challenge](src/main/java/code401challenges/readmes/)
 * [Repeated Word](src/main/java/code401challenges/readmes/repeatedWord.md)
-* [Challenge](src/main/java/code401challenges/readmes/treeIntersect.md)
+* [Tree Intersect](src/main/java/code401challenges/readmes/treeIntersect.md)
 * [Challenge](src/main/java/code401challenges/readmes/)
 * [Challenge](src/main/java/code401challenges/readmes/)
 * [Challenge](src/main/java/code401challenges/readmes/)

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //https://www.baeldung.com/java-binary-tree
 public class Tree<E>{
-    Node<E> root;
+  public Node<E> root;
 
     public Tree(Node<E> root) {
         this.root = root;

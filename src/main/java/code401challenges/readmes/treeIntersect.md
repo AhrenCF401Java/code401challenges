@@ -14,7 +14,7 @@ not sure about space its not o(n2)
 I think its O(n) time  
 
 ##Whiteboard pics:
-<img src="../assets/treeIntersect.jpg"
+<img src="../assets/treeIntersect.jpg">
 
 ##
 

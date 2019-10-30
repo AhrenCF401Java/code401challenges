@@ -12,7 +12,10 @@
 * [Breadth First Search](./readmes/breadth.md)
 * [Insertion Sort](./readmes/insertionSort.md)
 * [Merge Sort](./readmes/mergeSort)
-
+* [Challenge](./readmes/)
+* [Repeated Word](./readmes/repeatedWord.md)
+* [Challenge](./readmes/)
+* [Challenge](./readmes/)
 * [Challenge](./readmes/)
 * [Challenge](./readmes/)
 * [Challenge](./readmes/)

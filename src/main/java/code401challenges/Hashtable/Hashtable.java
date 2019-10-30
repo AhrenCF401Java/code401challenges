@@ -4,43 +4,53 @@ package code401challenges.Hashtable;
 import java.util.LinkedList;
 
 public class Hashtable {
+    LinkedList<Item>[] hashTable = new LinkedList[5];
 
-    public static void main(String[] args){
-        Hashtable testTable = new Hashtable();
-        System.out.println("cat".hashCode());
-        System.out.println("cat".hashCode());
-        System.out.println(testTable.hashIt("cat"));
-        System.out.println(testTable.hashIt("cat"));
-
-        System.out.println(testTable.toString());
-        testTable.add("blah", "test");
-        testTable.add("blah", "test");
-        testTable.add("3", "monkies");
-        testTable.get("monkies");
-
-
-        System.out.println(testTable.get("3"));
+    public int hashIt(String key) {
+        String hash ="";
+       for(int i=0;i<key.length();i++){
+          hash = hash + (int)key.charAt(i);
+          if(i == key.length()-1){
+//              https://www.mkyong.com/java/java-convert-string-to-int/
+              System.out.println(Integer.parseInt(hash) + "Hash as integer");
+             hash = "" + Integer.parseInt(hash) % hashTable.length;
+          }
+        }
+       return  Integer.parseInt(hash);
     }
 
-    LinkedList<Item>[]  hashTable = new LinkedList[5];
-
-    public int hashIt(String key ){
-       return key.hashCode() % hashTable.length;
-    }
 
     public void add(String key, String value) {
 //  add the new item to the array at the hash of the key
-        if (hashTable[hashIt(key)] == null) {
-            hashTable[hashIt(key)] = new LinkedList<Item>();
+        int i = hashIt(key);
+        if ( hashTable[i] == null) {
+            hashTable[i] = new LinkedList<Item>();
         }
-            hashTable[hashIt(key)].add(new Item(key, value));
-        }
+        if (contains(key)) {
+            for (Item item : hashTable[i]) {
+                if (item.key.equals(key)) {
+                    item.value = value;
+                }
+            }
+        }else{
+                hashTable[i].add(new Item(key, value));
+            }
+}
 
-    public LinkedList<Item> get(String key){
-        System.out.println(hashIt(key) + "Hash key get");
-        return hashTable[hashIt(key)];
+    public Item get(String key) {
+        System.out.println(hashIt(key) + " Hash key get");
+        for (Item item : hashTable[hashIt(key)]) {
+            if (item.key.equals(key)) { return item; }
+        }
+        return null;
     }
-    public void contains(String key){
 
+    public boolean contains(String key){
+        for(Item item: hashTable[hashIt(key)]){
+            if(item.key.equals(key)){
+                return true;
+            }
+        }
+        return false;
     }
 }

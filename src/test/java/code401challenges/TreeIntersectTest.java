@@ -23,27 +23,17 @@ public class TreeIntersectTest {
     @Before
     public void setup() {
         treeOne = new Tree<>(rootNode1);
-        rootNode1 = new Node<>(150,
-//                                    left of root
-                new Node<Integer>(100,
-//                       left                         right
-                        new Node<Integer>(75), new Node<Integer>(160,
-//                                                 left                 right
-                        new Node<Integer>(125), new Node<Integer>(175))),
-//
-//                                    right of root
+        rootNode1 = new Node<Integer>(150,
+                new Node<Integer>(100, new Node<Integer>(75),
+                        new Node<Integer>(160, new Node<Integer>(125), new Node<Integer>(175))),
                 new Node<Integer>(250,
-//                          left                        Right
-                        new Node<Integer>(200), new Node<Integer>(350,
-//                                                    left                      right
-                        new Node<Integer>(300), new Node<Integer>(500))));
+                        new Node<Integer>(200),
+                        new Node<Integer>(350, new Node<Integer>(300), new Node<Integer>(500))));
 
 
         treeTwo = new Tree<>(rootNode2);
 
-        rootNode2 = new Node<>(42,
-//                                    left of root
-                new Node<Integer>(100,
+        rootNode2 = new Node<Integer>(42, new Node<Integer>(100,
 //                       left                         right
                         new Node<Integer>(15), new Node<Integer>(160,
 //                                                   left                 right

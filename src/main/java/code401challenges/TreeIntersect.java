@@ -5,9 +5,11 @@ import code401challenges.tree.Node;
 import code401challenges.tree.Tree;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class TreeIntersect {
-    Hashtable treeOneVals = new Hashtable();
+    Set<Integer> treeOneVals = new HashSet<>();
     ArrayList<Integer> seenVals = new ArrayList();
 
     public ArrayList<Integer> sameVals(Tree<Integer> treeOne, Tree<Integer> treeTwo){
@@ -20,21 +22,27 @@ public class TreeIntersect {
         return seenVals;
     }
 
+
+
+    private void addToHM(Node cur){
+        if(cur != null){
+            treeOneVals.add((Integer) cur.getValue());
+            System.out.println(treeOneVals.toString()+"hello");
+        }
+        addToHM(cur.getRight());
+        addToHM(cur.getLeft());
+    }
+
+
+
     private void checkHM(Node cur){
         if(cur != null) {
-            if (treeOneVals.contains(cur.toString())) {
+            if (treeOneVals.contains(cur.getValue())) {
                 seenVals.add((Integer) cur.getValue());
+                System.out.println(seenVals.toString()+"hello");
             }
             checkHM(cur.getLeft());
             checkHM(cur.getRight());
         }
-    }
-
-    private void addToHM(Node cur){
-        if(cur != null){
-            treeOneVals.add(cur.getValue().toString(),cur.getValue().toString());
-        }
-        addToHM(cur.getRight());
-        addToHM(cur.getLeft());
     }
 }

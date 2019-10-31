@@ -19,7 +19,7 @@ public class Tree<E>{
        return maxValue(this.root);
     }
 
-    public int maxValue(Node node) {
+    public int maxValue(Node<E> node) {
             int max = (int) node.value;
             if (node.right != null) {
                 int maxRight = maxValue(node.right);

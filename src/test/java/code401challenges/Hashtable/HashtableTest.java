@@ -10,26 +10,24 @@ public class HashtableTest {
     @Before
     public void setup(){
         testTable = new Hashtable();
-        testTable.add("1","pig");
-        testTable.add("2","bacon");
-        testTable.add("3","cow");
-        testTable.add("4","beef");
+        testTable.add("pig","pig");
+        testTable.add("pig2","bacon");
+        testTable.add("cow","cow");
+        testTable.add("cow2","beef");
     }
 
     @Test
     public void hashItTest() {
-        assertEquals( 1, testTable.hashIt("1"));
-    }
-
-    @Test
-    public void add() {
+        assertEquals( 8, testTable.hashIt("onk"));
     }
 
     @Test
     public void get() {
+        assertEquals("pig",testTable.get("pig"));
     }
 
     @Test
     public void contains() {
+        assertEquals(true, testTable.contains("pig"));
     }
 }

@@ -7,16 +7,16 @@ public class Hashtable {
     LinkedList<Item>[] hashTable = new LinkedList[5];
 
     public int hashIt(String key) {
-        String hash ="";
+        Integer hash =0;
        for(int i=0;i<key.length();i++){
           hash = hash + (int)key.charAt(i);
           if(i == key.length()-1){
 //              https://www.mkyong.com/java/java-convert-string-to-int/
-              System.out.println(Integer.parseInt(hash) + "Hash as integer");
-             hash = "" + Integer.parseInt(hash) % hashTable.length;
+              System.out.println(hash + "Hash as integer");
+             hash = hash % hashTable.length;
           }
         }
-       return  Integer.parseInt(hash);
+       return  hash;
     }
 
 
@@ -37,10 +37,13 @@ public class Hashtable {
             }
 }
 
-    public Item get(String key) {
+    public String get(String key) {
         System.out.println(hashIt(key) + " Hash key get");
         for (Item item : hashTable[hashIt(key)]) {
-            if (item.key.equals(key)) { return item; }
+            if (item.key.equals(key))
+            {
+                return item.value;
+            }
         }
         return null;
     }

@@ -1,13 +1,14 @@
 package code401challenges.graph;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class Graph<E> {
     Set<Node<E>> nodes;
 
-    public Graph(Set<Node<E>> nodes) {
-        this.nodes = nodes;
+    public Graph() {
+        this.nodes = new HashSet<>();
     }
 
     public Node<E> add(E value){
@@ -25,11 +26,11 @@ public class Graph<E> {
         return false;
     }
 
-    public Set<Node<E>> GetNodes(){
+    public Set<Node<E>> getNodes(){
         return nodes;
     }
 
-    public List<Edge<E>> GetNeighbors(Node<E> node){
+    public List<Edge<E>> getNeighbors(Node<E> node){
         return node.neighbors;
     };
 

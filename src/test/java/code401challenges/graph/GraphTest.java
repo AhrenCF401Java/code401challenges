@@ -56,7 +56,7 @@ public class GraphTest {
         Node<Integer> testNode3 = testGraph.add(12);
         List<Edge<Integer>> testList = new LinkedList<>();
 
-        assertEquals(testList,testGraph.getNeighbors(testNode));
+        assertEquals(1,testGraph.getNeighbors(testNode));
         testGraph.addEdge(testNode, testNode2, 20);
         testGraph.addEdge(testNode,testNode3,10);
         for (Edge<Integer> edge: testNode.neighbors)

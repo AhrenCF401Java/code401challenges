@@ -9,7 +9,7 @@
 ## Approach & Efficiency
 
 ##Whiteboard pics:
-<img src="../assets/">
+![](../assets/)
 
 ##
 

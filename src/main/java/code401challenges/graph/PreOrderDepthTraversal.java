@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Set;
 
 public class PreOrderDepthTraversal {
+
     Set<Node> seen = new HashSet<>();
+
     public Set preDepth(Graph graph, Node node){
         if (node != null) {
             if (seen.add(node)) {

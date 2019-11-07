@@ -1,9 +1,12 @@
 package code401challenges.graph;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class GetEdges {
-    public static String possibleTrip(Graph graph, Node[] cities){
+    @NotNull
+    public static String possibleTrip(Graph graph, @NotNull Node[] cities){
         int tripTotal=0;
         for(int i=0; i < cities.length-2; i++){
             List<Edge> neighbs = graph.getNeighbors(cities[i]);

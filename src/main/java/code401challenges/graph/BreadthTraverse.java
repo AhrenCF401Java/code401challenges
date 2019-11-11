@@ -8,6 +8,7 @@ public class BreadthTraverse {
 
     public Set<Node> traverseBreadth(Graph graph, Node node){
 //      add the node to start with to the set
+        Queue<Node> nextNode = new LinkedList<>();
         Set<Node> toReturn = new HashSet<>();
         if(node != null) {
             toReturn.add(node);

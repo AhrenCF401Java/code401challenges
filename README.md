@@ -1,4 +1,4 @@
-##Links to 401 Code Challenge Descriptions and whiteboards
+## Links to 401 Code Challenge Descriptions and whiteboards
 * [Reverse an Array](src/main/java/code401challenges/readmes/arreverse.md)
 * [Shift an Array](src/main/java/code401challenges/readmes/arrshift.md)
 * [Binary search](src/main/java/code401challenges/readmes/binary.md )

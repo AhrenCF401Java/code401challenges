@@ -13,8 +13,8 @@ public class Hashtable {
           if(i == key.length()-1){
 //              https://www.mkyong.com/java/java-convert-string-to-int/
               System.out.println(hash + "Hash as integer");
-             hash = hash % hashTable.length;
-          }
+              hash = hash % hashTable.length;
+           }
         }
        return  hash;
     }

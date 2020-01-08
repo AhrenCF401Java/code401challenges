@@ -3,7 +3,7 @@ package code401challenges.graph;
 
 
 import java.util.List;
-
+//method that determines if a flight path is possiple
 public class GetEdges {
     public static String possibleTrip(Graph graph, Node[] cities){
         int tripTotal=0;

@@ -17,7 +17,7 @@ public class Graph<E> {
         return newNode;
     }
 
-    public boolean addEdge(Node<E> one, Node<E> two, int weight){
+    public boolean addEdge(Node one, Node<E> two, int weight){
         if (nodes.contains(one) && nodes.contains(two)) {
             one.neighbors.add(new Edge<>(weight,two));
             two.neighbors.add(new Edge<>(weight,one));

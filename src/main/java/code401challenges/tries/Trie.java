@@ -62,6 +62,21 @@ public class Trie {
         }
     }
 
+    public boolean startsWith(String prefix) {
+        // search fo the word in the trie if it is found and last nodes hashmap != null return true
+        HashMap<Character,TrieNode> children = root.getChildren();
+        TrieNode node = null;
+
+        for(int c = 0; c < prefix.length(); c++){
+            if(children.containsKey(prefix.charAt(c))){
+                node = children.get(prefix.charAt(c));
+                children = node.getChildren();
+            }else{
+                return false;
+            }
+        }
+        return true;
+    }
 
 //
     public void printAllNodeValues(TrieNode root){

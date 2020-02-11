@@ -26,12 +26,28 @@ public class TrieTest {
         testTrie.insert("llama");
         testTrie.insert("long");
         assertTrue(testTrie.search("llama"));
+        testTrie.insert("pulley");
+        assertFalse(testTrie.search("pull"));
+        testTrie.insert("pull");
+        assertTrue(testTrie.search("pull"));
     }
 
     @Test
     public void printAllNodeValues() {
         testTrie.insert("llama");
         testTrie.insert("long");
+        testTrie.insert("pulley");
+        testTrie.insert("pull");
+        testTrie.insert("armory");
         testTrie.printAllNodeValues(testTrie.root);
     }
+
+    @Test
+    public void startsWith() {
+        testTrie.insert("llama");
+        testTrie.insert("long");
+        assertTrue(testTrie.startsWith("l"));
+        assertFalse(testTrie.startsWith("p"));
+    }
+
 }

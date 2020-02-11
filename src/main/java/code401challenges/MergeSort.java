@@ -1,8 +1,9 @@
 package code401challenges;
 
+
+
 import java.util.Arrays;
 
-import static code401challenges.InsertionSort.insertSort;
 import static code401challenges.Merge.merge;
 
 public class MergeSort {

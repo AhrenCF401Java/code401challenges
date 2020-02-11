@@ -35,11 +35,6 @@ public class PreOrderDepthTraversalTest {
         expectedPlaces.add("Metroville");
         assertEquals(expectedPlaces,places);
 
-
-
-        expectedPlaces.add("Naboo");
-        assertNotEquals(expectedPlaces,places);
-
     }
     @Test
     public void preDepthTest2() {

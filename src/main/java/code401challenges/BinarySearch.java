@@ -7,8 +7,11 @@ public class BinarySearch {
 
     public static int search(int[] arr,int target) {
         int length = arr.length;
+
+//        keep track of the left and right
         int l = 0;
         int r = length - 1;
+
         while (l <= r) {
             int mid = (l + r) / 2;
             if (arr[mid] < target) {

@@ -1,4 +1,10 @@
+package code401challenges;
+
+
+import com.google.common.io.Resources;
+
 import java.util.Arrays;
+
 public class ArrayReverse{
     
     public static void main(String[]args){
@@ -8,7 +14,6 @@ public class ArrayReverse{
     }
     public static int[] reverse(int[] array){
             int[] reverseArray = new int[array.length];
-            //cannot use for each as it does not remember index
             for(int i = 0; i < array.length; i++){
                 reverseArray[i] = array[array.length-1-i];
             }

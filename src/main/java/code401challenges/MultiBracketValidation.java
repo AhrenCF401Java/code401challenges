@@ -1,11 +1,12 @@
 package code401challenges;
 
+
 import org.apache.commons.math3.exception.NullArgumentException;
 
 import java.util.Stack;
 
 public class MultiBracketValidation {
-    public static boolean multiBracketValidation(String s) {
+    public static boolean multiBracketValidation(String s)throws NullArgumentException {
         //set a placeholder for the current string
         String curChar = null;
         if (s == null) {
